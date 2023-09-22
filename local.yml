@@ -1,0 +1,19 @@
+version: '3'
+
+
+services:
+  python:
+    build:
+      dockerfile: Dockerfile
+    image: jaa
+    networks:
+      - agos_dj_agos_server_network
+    volumes:
+      - .:/app:z
+
+volumes:
+  jaa:
+
+networks:  
+  agos_dj_agos_server_network:
+    external: true
